@@ -1,0 +1,13 @@
+.app {
+  width: 70vw;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #bddcf0;
+  height: 100vh;
+}
+
+.app img {
+  max-width: 150px;
+}

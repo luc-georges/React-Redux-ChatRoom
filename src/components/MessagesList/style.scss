@@ -1,0 +1,32 @@
+.message-list{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: calc(100vh-3em);
+    align-content: flex-end;
+    padding: 2em;
+
+    
+}
+.message{
+    margin-top:3em;
+    margin-left: 1em;
+    align-self: flex-end;
+    flex-basis:100%;
+
+    &-text{
+        padding: 1em;
+        border-radius: 1em;
+        font-size: 0.9em;
+        background-color: rgb(246, 248, 248);
+        display: inline-block;
+        color: rgba(0, 0, 255, 0.767);
+    }
+
+    &-author{
+        margin-left: 1em;
+        margin-bottom: 1em;
+        font-size: 0.8em;
+    }
+}

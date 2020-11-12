@@ -1,0 +1,16 @@
+.message-form{
+    display: flex;
+    background-color: white;
+    &--submit{
+        width: 40px;
+        height: 40px;
+        margin-top: .5em;
+        margin-right: .5em;
+        color:rgba(0, 0, 255, 0.603);;
+    }
+    &--input{
+        width: 70vw;
+        height: 4em;
+        border: none;
+    }
+}
