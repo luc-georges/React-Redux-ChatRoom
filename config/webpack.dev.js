@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
-const port = 8080;
+const port = 3000;
 
 module.exports = merge(common, {
   mode: 'development',
@@ -49,6 +49,7 @@ module.exports = merge(common, {
     contentBase: paths.build,
     clientLogLevel: 'warn',
     overlay: true,
+    host:'192.168.1.34',
     stats: 'minimal',
     open: false,
     compress: true,

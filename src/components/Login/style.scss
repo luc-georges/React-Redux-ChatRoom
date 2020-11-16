@@ -1,0 +1,40 @@
+.settings{
+    display: flex;
+    position: fixed;
+    top: 1em;
+    right: 0;
+    padding: 1em;
+    align-items: center;
+    &-button{
+        width:1.2em;
+        height: 1.2em;
+        background-color: aliceblue;
+        border-radius: 50%;
+        font-size: 2em;
+        color: rgb(94, 91, 91);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: .7em;
+    }
+    &-form{
+        display: flex;
+        flex-direction: column;
+        input{
+            border: none;
+            border-radius: 10px;
+            padding: .4em;
+            font-size: 1.15em;
+            margin-bottom: .3em;
+        }
+        button{
+            background-color: #006CBA;
+            padding: .4em;
+            border-radius: 10px;
+            border: none;
+            color: white;
+        }
+    }
+
+
+}

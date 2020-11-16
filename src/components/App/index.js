@@ -3,14 +3,16 @@ import React from "react";
 
 // == Import
 import "./styles.css";
-import MessageList from "../MessagesList";
-import MessageForm from "../MessageForm";
+import MessagesList from "../../containers/MessagesList";
+import MessageForm from "../../containers/MessageForm";
+import Login from "../Login"
 
 // == Composant
 const App = () => (
   <div className="app">
-    <MessageList />
-    <MessageForm />
+    <Login />
+    <MessagesList  />
+    <MessageForm  />
   </div>
 );
 
