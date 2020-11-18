@@ -3,28 +3,31 @@ import "./style.scss";
 import { FiSend } from 'react-icons/fi'
 import PropTypes from 'prop-types'
 
-const MessageForm = ({onInputChange, onFormSubmit, message}) => {
+
+const MessageForm = ({onInputChange, onFormSubmit, message,isLogged}) => {
 
   return (
   <form className="message-form"
         onSubmit={(ev) =>{
           ev.preventDefault();
           onFormSubmit();
+
         }}>
     <input 
-    placeholder="type your text" 
+    disabled={!isLogged }
+    placeholder={isLogged ? "type your text" : "Login to start conversation"} 
     className="message-form--input" 
     onChange={ (e) => {
       onInputChange(e.target.value);
     }}
     value={message}
     />
-    <FiSend 
+    {isLogged &&<FiSend 
       className="message-form--submit" 
       onClick={()=>{
         console.log("clic");
         onFormSubmit();
-      }}/>
+      }}/>}
   </form>);
 };
 

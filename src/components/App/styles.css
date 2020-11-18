@@ -1,11 +1,11 @@
 .app {
-  width: 70vw;
+  width: 60vw;
+  height: 100vh;
   margin: auto;
-
   display: flex;
   flex-direction: column;
   background-color: #bddcf0;
-  height: 100vh;
+
 }
 
 .app img {

@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+
 import "./style.scss";
 import PropTypes from 'prop-types'
 
-const MessagesList = ({ list }) => {
-console.log();
+const MessagesList = ({ list,user }) => {
+  const containerElement = useRef(null);
+  useEffect(() => {
+    const scrollY = containerElement.current.scrollHeight;
+    containerElement.current.scrollTo(0, scrollY);
+  }, [list]);
   return (
-    <div className="message-list">
+    <div ref={containerElement} className="message-list"  >
       {list.map((messageObject) =>{
-        return   <Message key={messageObject.id}{...messageObject} />
+        return   <Message key={messageObject.id}{...messageObject} connectedUser={user} />
     
       })}
     </div>
@@ -15,16 +20,19 @@ console.log();
 };
 
 
+const Message = ({author, content,connectedUser}) => {
 
-const Message = ({author, content}) => {
-  return <div className="message">
-          <div className="message-author">
+  return (
+  <div className={connectedUser === author ? "message" : "message right"}>
+    
+          <div className={connectedUser === author ? "message-author" : "message-author--right"}>
             {author}
           </div>
           <div className="message-text">
             {content}
           </div>
-        </div>;
+        </div>
+        )
 };
 
 MessagesList.propTypes ={

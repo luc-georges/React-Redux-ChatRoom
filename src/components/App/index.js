@@ -5,12 +5,14 @@ import React from "react";
 import "./styles.css";
 import MessagesList from "../../containers/MessagesList";
 import MessageForm from "../../containers/MessageForm";
-import Login from "../Login"
+import Login from "../../containers/Login"
+
+
 
 // == Composant
 const App = () => (
   <div className="app">
-    <Login />
+    <Login/>
     <MessagesList  />
     <MessageForm  />
   </div>

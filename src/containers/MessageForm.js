@@ -4,7 +4,8 @@ import { onInputChange,onFormSubmit } from '../store/action';
 
 
 const mapStateToProps= (state) =>({
-message: state.messageInput
+message: state.messageInput,
+isLogged: state.isLogged,
 });
 
 const mapDispatchToProps = (dispatch) =>({
